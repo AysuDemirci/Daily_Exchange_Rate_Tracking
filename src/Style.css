@@ -1,0 +1,29 @@
+.exchange-list{
+  width: 250px;
+  height: 150px;
+  border: 1px solid black;
+  text-align: center;
+ 
+}
+
+.exchange-style{
+    list-style: none;
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+
+.navbar-style{
+    list-style: none;
+    margin-left: -45px;
+    
+   
+}
+
+.sidenavbar-item{
+    height: 45px;
+    width: 230px;
+    border: 1px solid black;
+    text-align: center;
+    margin: 5px;
+}
