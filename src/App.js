@@ -8,6 +8,11 @@ import { Col, Container, Row } from "reactstrap";
 function App() {
   return (
     <div>
+      <div>
+        <h4 className="header">Daily Exchange Rate Tracking</h4>
+      </div>
+
+      <br />
       <CarouselExhange />
       <br />
       <br />
