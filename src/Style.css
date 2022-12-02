@@ -1,16 +1,5 @@
-.exchange-list{
-  width: 250px;
-  height: 150px;
-  border: 1px solid black;
-  text-align: center;
- 
-}
-
-.exchange-style{
-    list-style: none;
-   display: flex;
-   align-items: center;
-   gap: 20px;
+.exchange-card-styles{
+    display: inline;
 }
 
 .navbar-style{
@@ -26,4 +15,9 @@
     border: 1px solid black;
     text-align: center;
     margin: 5px;
+}
+.header{
+    margin-left: 42%;
+    margin-top: 1%;
+    margin-bottom: 2%;
 }
