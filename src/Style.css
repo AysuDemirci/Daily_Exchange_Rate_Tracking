@@ -1,5 +1,31 @@
+.exchange-slideshow{
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+   overflow: hidden;
+   
+    position: relative;
+}
+
 .exchange-card-styles{
-    display: inline;
+    animation: slideshow 15s linear infinite ;
+    
+     display: flex;
+    
+}
+.exchange-ul-style{
+    list-style: none;
+    text-align: center;
+
+}
+
+
+@keyframes slideshow {
+    
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
 }
 
 .navbar-style{
@@ -21,3 +47,4 @@
     margin-top: 1%;
     margin-bottom: 2%;
 }
+
