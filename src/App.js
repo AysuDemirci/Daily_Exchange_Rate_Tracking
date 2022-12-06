@@ -13,8 +13,13 @@ export default class App extends Component {
   getExchangeRates = () => {
     fetch("http://localhost:3000/exchangeRates")
       .then((response) => response.json())
-      .then((data) => this.setState({ exchangeRates: data }));
-    console.log(this);
+      .then((data) => {
+        data.map((x) => {
+          x.price = Math.floor(Math.random() * 50);
+        });
+
+        this.setState({ exchangeRates: data });
+      });
   };
 
   render() {
