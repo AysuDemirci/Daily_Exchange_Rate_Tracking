@@ -1,16 +1,8 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
-import {
-  Card,
-  CardBody,
-  CardText,
-  CardTitle,
-  Col,
-  Container,
-  Row,
-} from "reactstrap";
+import React, { Component, useEffect, useState } from "react";
+import { Container, Row } from "reactstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaArrowUp } from "react-icons/fa";
 
 export default class CarouselExhange extends Component {
   componentDidMount() {
@@ -24,20 +16,40 @@ export default class CarouselExhange extends Component {
           <Row className="exchange-card-styles">
             <div style={{ display: "flex" }}>
               {this.props.exchangeRates.map((exchangeRate) => (
-                <Col>
-                  <ul className="exchange-ul-style" key={exchangeRate.id}>
-                    <li>{exchangeRate.currencyName}</li>
-                    <li>{exchangeRate.price}</li>
-                  </ul>
-                </Col>
+                <ul className="exchange-ul-style" key={exchangeRate.id}>
+                  <li style={{ width: "100px" }}>
+                    {exchangeRate.currencyName}
+                  </li>
+                  <li>
+                    {exchangeRate.price}
+                    <FaArrowUp
+                      style={{
+                        width: "13px",
+                        color: "green",
+                        marginLeft: "10px",
+                        marginTop: "-5px",
+                      }}
+                    />
+                  </li>
+                </ul>
               ))}
               {this.props.exchangeRates.map((exchangeRate) => (
-                <Col>
-                  <ul className="exchange-ul-style" key={exchangeRate.id}>
-                    <li>{exchangeRate.currencyName}</li>
-                    <li>{exchangeRate.price}</li>
-                  </ul>
-                </Col>
+                <ul className="exchange-ul-style" key={exchangeRate.id}>
+                  <li style={{ width: "100px" }}>
+                    {exchangeRate.currencyName}
+                  </li>
+                  <li>
+                    {exchangeRate.price}
+                    <FaArrowUp
+                      style={{
+                        width: "13px",
+                        color: "green",
+                        marginLeft: "10px",
+                        marginTop: "-5px",
+                      }}
+                    />
+                  </li>
+                </ul>
               ))}
             </div>
           </Row>
