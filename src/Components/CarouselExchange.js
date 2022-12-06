@@ -1,13 +1,19 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { Component, useState } from "react";
 import { Container, Row } from "reactstrap";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { FaArrowUp } from "react-icons/fa";
+
+// this.props.exchangeRates.forEach(function(price){
+//   let prices =this.props.exchangeRates.price
+//   this.props.exchangeRates.price.map((prices) => (Math.floor(Math.random()*25)))
+// })
+
+
 
 export default class CarouselExhange extends Component {
   componentDidMount() {
     this.props.getExchangeRates();
   }
+  
 
   render() {
     return (
