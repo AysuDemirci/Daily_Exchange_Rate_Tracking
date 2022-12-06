@@ -1,19 +1,43 @@
 .exchange-slideshow{
     box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
    overflow: hidden;
+   position: relative;
    
-    position: relative;
+   
 }
 
+.exchange-slideshow::before,
+.exchange-slideshow::after{
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    content: "";
+    background: linear-gradient(to right, white 0%, rgba(255,255,255,0)100%);
+    z-index: 2;
+}
+
+.exchange-slideshow::before{
+    left: 0;
+    top: 0;
+}
+.exchange-slideshow::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+
+
 .exchange-card-styles{
-    animation: slideshow 15s linear infinite ;
+    animation: slideshow 30s linear infinite ;
     
      display: flex;
     
 }
 .exchange-ul-style{
     list-style: none;
-    text-align: center;
+    
+    
 
 }
 
