@@ -15,7 +15,7 @@ export default class App extends Component {
       .then((response) => response.json())
       .then((data) => {
         data.map((x) => {
-          x.price = Math.floor(Math.random() * 50);
+          x.price = Math.round(Math.random() * 1700) / 100;
         });
         this.setState({ exchangeRates: data });
       });
