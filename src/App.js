@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { Component} from "react";
 import CarouselExhange from "./Components/CarouselExchange";
 import SideNavbar from "./Components/SideNavbar";
 import Contents from "./Components/Contents";
@@ -40,6 +40,7 @@ export default class App extends Component {
         <CarouselExhange
           getExchangeRates={this.getExchangeRates}
           exchangeRates={this.state.exchangeRates}
+          
         />
         <br />
         <br />
