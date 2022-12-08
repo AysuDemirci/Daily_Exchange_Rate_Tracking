@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import CarouselExhange from "./Components/CarouselExchange";
 import SideNavbar from "./Components/SideNavbar";
 import Contents from "./Components/Contents";
@@ -17,10 +17,17 @@ export default class App extends Component {
         data.map((x) => {
           x.price = Math.floor(Math.random() * 50);
         });
-
         this.setState({ exchangeRates: data });
       });
   };
+
+  componentDidMount() {
+    const timer = setTimeout(() => {
+      this.getExchangeRates();
+    }, 60000 * 2);
+
+    return () => clearTimeout(timer);
+  }
 
   render() {
     return (
