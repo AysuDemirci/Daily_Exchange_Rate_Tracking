@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { Component } from "react";
-=======
-import React, { Component} from "react";
->>>>>>> develop
 import CarouselExhange from "./Components/CarouselExchange";
 import SideNavbar from "./Components/SideNavbar";
 import Contents from "./Components/Contents";
@@ -19,12 +15,8 @@ export default class App extends Component {
       .then((response) => response.json())
       .then((data) => {
         data.map((x) => {
-<<<<<<< HEAD
           x.price = Math.round(Math.random() * 2000) / 100;
           x.status = 'default'
-=======
-          x.price = Math.round(Math.random() * 1700) / 100;
->>>>>>> develop
         });
         
         this.setState({ exchangeRates: data });
@@ -64,11 +56,7 @@ export default class App extends Component {
         <br />
         <CarouselExhange
           exchangeRates={this.state.exchangeRates}
-<<<<<<< HEAD
           Timer={this.Timer}
-=======
-          
->>>>>>> develop
         />
         <br />
         <br />
