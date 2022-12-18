@@ -1,4 +1,4 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import CarouselExhange from "./Components/CarouselExchange";
 import SideNavbar from "./Components/SideNavbar";
 import Contents from "./Components/Contents";
@@ -15,18 +15,35 @@ export default class App extends Component {
       .then((response) => response.json())
       .then((data) => {
         data.map((x) => {
-          x.price = Math.round(Math.random() * 1700) / 100;
+          x.price = Math.round(Math.random() * 2000) / 100;
+          x.status = 'default'
         });
+        
         this.setState({ exchangeRates: data });
       });
   };
 
-  componentDidMount() {
-    const timer = setTimeout(() => {
-      this.getExchangeRates();
-    }, 60000 * 2);
+  Timer = () => {
+    var compare = this.state.exchangeRates;
+    compare.map((x) => {
+      var oldPrice = x.price;
+      var newPrice = Math.round(Math.random() * 1500) / 100;
+      if (newPrice > oldPrice) {
+        x.status = "increase";
+      } else if(oldPrice > newPrice) {
+        x.status = "decrease";
+      }
+      x.price = newPrice;
+    });
+    
+    this.setState({ exchangeRates: compare });
+  };
 
-    return () => clearTimeout(timer);
+  componentDidMount() {
+    this.getExchangeRates();
+    setInterval(() => {
+      this.Timer();
+    }, 10000);
   }
 
   render() {
@@ -38,9 +55,8 @@ export default class App extends Component {
 
         <br />
         <CarouselExhange
-          getExchangeRates={this.getExchangeRates}
           exchangeRates={this.state.exchangeRates}
-          
+          Timer={this.Timer}
         />
         <br />
         <br />
