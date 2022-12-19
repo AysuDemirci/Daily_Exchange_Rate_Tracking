@@ -10,7 +10,7 @@ export default class CarouselExhange extends Component {
   compareValues = (exchangeRate) => {
     return (
       <ul className="exchange-ul-style" key={exchangeRate.id}>
-        <li style={{ width: "100px" }}>{exchangeRate.currencyName}</li>
+        <li style={{ width: "100px" }}>{exchangeRate.currencyName} / TRY</li>
         <li>
           {exchangeRate.price}
           {exchangeRate.status === "increase" ? (
