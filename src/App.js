@@ -60,7 +60,7 @@ export default class App extends Component {
         <br />
         <CarouselExhange
           exchangeRates={this.state.exchangeRates}
-          Timer={this.Timer}
+          
         />
         <br />
         <br />
@@ -70,7 +70,7 @@ export default class App extends Component {
             <Col md="3">
               <CurrencyConverter
                 exchangeRates={this.state.exchangeRates}
-                Timer={this.Timer}
+                
               />
             </Col>
             <Col md="6">
@@ -79,7 +79,7 @@ export default class App extends Component {
             <Col md="3">
               <CurrencyTable
                 exchangeRates={this.state.exchangeRates}
-                Timer={this.Timer}
+                
               />
             </Col>
           </Row>
