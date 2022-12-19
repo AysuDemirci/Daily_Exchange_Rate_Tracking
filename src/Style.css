@@ -52,24 +52,16 @@
     }
 }
 
-.navbar-style{
-    list-style: none;
-    margin-left: -45px;
-    
-   
-}
 
-.sidenavbar-item{
-    height: 45px;
-    width: 230px;
-    border: 1px solid black;
-    text-align: center;
-    margin: 5px;
-}
+
+
 .header{
-    margin-left: 42%;
-    margin-top: 1%;
-    margin-bottom: 2%;
+    color:white;
+    background-color: #ffaa5b;
+    height:55px;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+
+   
 }
 
 .arrow-price{
@@ -77,5 +69,10 @@
    margin-left: 10px;                     
    margin-top: -5px                    
 }
+.arrow-price1{
+    width: 13px;                   
+    margin-right: 10px;     
+                      
+ }
 
 
