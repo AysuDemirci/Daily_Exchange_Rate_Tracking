@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import CarouselExhange from "./Components/CarouselExchange";
 import CurrencyConverter from "./Components/CurrencyConverter";
 import Contents from "./Components/Contents";
@@ -6,6 +6,8 @@ import CurrencyTable from "./Components/CurrencyTable";
 import Footer from "./Components/Footer";
 import "./Style.css";
 import { Col, Container, Row } from "reactstrap";
+
+
 
 export default class App extends Component {
   state = {
@@ -45,7 +47,7 @@ export default class App extends Component {
     this.getExchangeRates();
     setInterval(() => {
       this.Timer();
-    }, 60000);
+    }, 3000);
   }
 
   render() {
@@ -65,6 +67,7 @@ export default class App extends Component {
         <br />
         <br />
         <br />
+        
         <Container>
           <Row>
             <Col md="3">
@@ -86,6 +89,7 @@ export default class App extends Component {
         </Container>
         <br/>
         <br/>
+        
         <Footer/>
       </div>
     );
