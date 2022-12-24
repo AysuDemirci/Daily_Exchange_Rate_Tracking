@@ -7,8 +7,6 @@ import Footer from "./Components/Footer";
 import "./Style.css";
 import { Col, Container, Row } from "reactstrap";
 
-
-
 export default class App extends Component {
   state = {
     exchangeRates: [],
@@ -19,7 +17,7 @@ export default class App extends Component {
       .then((response) => response.json())
       .then((data) => {
         data.map((x) => {
-          x.price = Math.round(Math.random() * 2000) / 100;
+          x.price = (Math.random() * 10).toFixed(2);
           x.status = "default";
         });
 
@@ -30,13 +28,10 @@ export default class App extends Component {
   Timer = () => {
     var compare = this.state.exchangeRates;
     compare.map((x) => {
-      var oldPrice = x.price;
-      var newPrice = Math.round(Math.random() * 1500) / 100;
-      if (newPrice > oldPrice) {
-        x.status = "increase";
-      } else if (oldPrice > newPrice) {
-        x.status = "decrease";
-      }
+      var incOrDec = Math.random() * (0.1 - -0.1) + -0.1;
+      var newPrice = (x.price - incOrDec).toFixed(2);
+
+      newPrice > x.price ? (x.status = "increase") : (x.status = "decrease");
       x.price = newPrice;
     });
 
@@ -60,37 +55,28 @@ export default class App extends Component {
         </div>
 
         <br />
-        <CarouselExhange
-          exchangeRates={this.state.exchangeRates}
-          
-        />
+        <CarouselExhange exchangeRates={this.state.exchangeRates} />
         <br />
         <br />
         <br />
-        
+
         <Container>
           <Row>
             <Col md="3">
-              <CurrencyConverter
-                exchangeRates={this.state.exchangeRates}
-                
-              />
+              <CurrencyConverter exchangeRates={this.state.exchangeRates} />
             </Col>
             <Col md="6">
               <Contents />
             </Col>
             <Col md="3">
-              <CurrencyTable
-                exchangeRates={this.state.exchangeRates}
-                
-              />
+              <CurrencyTable exchangeRates={this.state.exchangeRates} />
             </Col>
           </Row>
         </Container>
-        <br/>
-        <br/>
-        
-        <Footer/>
+        <br />
+        <br />
+
+        <Footer />
       </div>
     );
   }
