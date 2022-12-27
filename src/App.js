@@ -30,7 +30,9 @@ export default class App extends Component {
 
     var idList = [];
 
-    for (let i = 0; i < 2; i++) {
+    var bb = Math.floor(Math.random() * (5 - 1) + 1);
+
+    for (let i = 0; i < bb; i++) {
       const random = Math.floor(Math.random() * compare.length);
       idList.push(random);
     }
@@ -56,9 +58,13 @@ export default class App extends Component {
 
   componentDidMount() {
     this.getExchangeRates();
-    setInterval(() => {
+
+    const timeRandom = () => {
+      var rand = Math.floor(Math.random() * (5 - 1) + 1);
+      setTimeout(timeRandom, rand * 1000);
       this.Timer();
-    }, 3000);
+    };
+    timeRandom();
   }
 
   render() {
