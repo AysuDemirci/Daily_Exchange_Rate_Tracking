@@ -30,9 +30,9 @@ export default class App extends Component {
 
     var idList = [];
 
-    var bb = Math.floor(Math.random() * (5 - 1) + 1);
+    var value = Math.floor(Math.random() * (5 - 1) + 1);
 
-    for (let i = 0; i < bb; i++) {
+    for (let i = 0; i < value; i++) {
       const random = Math.floor(Math.random() * compare.length);
       idList.push(random);
     }
