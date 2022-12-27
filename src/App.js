@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import CarouselExhange from "./Components/CarouselExchange";
 import CurrencyConverter from "./Components/CurrencyConverter";
 import Contents from "./Components/Contents";
@@ -27,12 +27,30 @@ export default class App extends Component {
 
   Timer = () => {
     var compare = this.state.exchangeRates;
-    compare.map((x) => {
-      var incOrDec = Math.random() * (0.1 - -0.1) + -0.1;
-      var newPrice = (x.price - incOrDec).toFixed(2);
 
-      newPrice > x.price ? (x.status = "increase") : (x.status = "decrease");
-      x.price = newPrice;
+    var idList = [];
+
+    var value = Math.floor(Math.random() * (5 - 1) + 1);
+
+    for (let i = 0; i < value; i++) {
+      const random = Math.floor(Math.random() * compare.length);
+      idList.push(random);
+    }
+
+    compare.map((x) => {
+      const items = x.id;
+      var found = idList.find(function (element) {
+        return element == items;
+      });
+      if (found) {
+        var incOrDec = Math.random() * (0.1 - -0.1) + -0.1;
+        var newPrice = (x.price - incOrDec).toFixed(2);
+
+        newPrice > x.price ? (x.status = "increase") : (x.status = "decrease");
+        x.price = newPrice;
+      } else {
+        x.status = "default";
+      }
     });
 
     this.setState({ exchangeRates: compare });
@@ -40,9 +58,13 @@ export default class App extends Component {
 
   componentDidMount() {
     this.getExchangeRates();
-    setInterval(() => {
+
+    const timeRandom = () => {
+      var rand = Math.floor(Math.random() * (5 - 1) + 1);
+      setTimeout(timeRandom, rand * 1000);
       this.Timer();
-    }, 3000);
+    };
+    timeRandom();
   }
 
   render() {

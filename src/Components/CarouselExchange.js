@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import { Container, Row } from "reactstrap";
-import { FaArrowDown, FaArrowsAltH, FaArrowUp } from "react-icons/fa";
+import { FaArrowDown, FaArrowUp, FaMinus } from "react-icons/fa";
 
 export default class CarouselExhange extends Component {
-
- 
-
   compareValues = (exchangeRate) => {
-    
     return (
       <ul className="exchange-ul-style" key={exchangeRate.id}>
         <li style={{ width: "100px" }}>{exchangeRate.currencyName} / TRY</li>
@@ -15,11 +11,20 @@ export default class CarouselExhange extends Component {
         <li>
           {exchangeRate.price}
           {exchangeRate.status === "increase" ? (
-            <FaArrowUp className="arrow-price fade-in" style={{ color: "green" }} />
+            <FaArrowUp
+              className="arrow-price fade-in fade-out"
+              style={{ color: "green" }}
+            />
           ) : exchangeRate.status === "decrease" ? (
-            <FaArrowDown className="arrow-price fade-in" style={{ color: "red" }} />
+            <FaArrowDown
+              className="arrow-price fade-in fade-out"
+              style={{ color: "red" }}
+            />
           ) : (
-            <FaArrowsAltH className="arrow-price fade-in" style={{ color: "grey" }} />
+            <FaMinus
+              className="arrow-price3"
+              style={{ color: "lightgray" }}
+            />
           )}
         </li>
       </ul>
