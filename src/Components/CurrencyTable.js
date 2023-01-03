@@ -8,7 +8,7 @@ export default class CurrencyTable extends Component {
         <table
           style={{
             border: "1px solid #ffaa5b",
-            width: "400px",
+            width: "350px",
             height: "470px",
             boxShadow: " 0 10px 20px -10px rgba(0,0,0,0.2)",
             textAlign:"center"
@@ -30,6 +30,7 @@ export default class CurrencyTable extends Component {
               <th style={{ fontSize: "15px", color: "orangered" }}>
                 Currency Rate
               </th>
+              <th style={{color:"white"}}>.......</th>
             </tr>
           </thead>
 
