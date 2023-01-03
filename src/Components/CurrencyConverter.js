@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Button, Col, Container, Input, Row } from "reactstrap";
 import { FaExchangeAlt } from "react-icons/fa";
-import { objectGroup } from "fontawesome";
 
 export default function CurrencyConverter(props) {
   const { exchangeRates } = props;
@@ -28,17 +27,21 @@ export default function CurrencyConverter(props) {
     convert();
   }, [exchangeRates]);
 
-  //seçilmiş olan name'in değerini rate e ver örn: eur tıklanmışsa değeri 100se 100 veersin
-  function convert() {
-    var rateObjectTo = info.find(function (element) {
-      return element.name == to;
+  function findElement(listOfObject, currencyName) {
+    var rateObject = listOfObject.find(function (element) {
+      return element.name == currencyName;
     });
-    var rateObjectFrom = info.find(function (element) {
-      return element.name == from;
-    });
+    if (rateObject !== undefined) {
+      return rateObject.price;
+    }
+  }
 
-    if (rateObjectTo !== undefined && rateObjectFrom !== undefined) {
-      setOutput((input * rateObjectFrom.price) / rateObjectTo.price);
+  function convert() {
+    var findTo = findElement(info, to);
+    var findFrom = findElement(info, from);
+
+    if (findTo !== undefined && findFrom !== undefined) {
+      setOutput((input * findFrom) / findTo);
     }
   }
 
@@ -151,9 +154,7 @@ export default function CurrencyConverter(props) {
           </Row>
 
           <h6 style={{ marginLeft: "25px", marginTop: "15px" }}> Amount:</h6>
-          <p style={{ marginLeft: "25px" }}>
-            {output.toFixed(2) + " " + to}
-          </p>
+          <p style={{ marginLeft: "25px" }}>{output.toFixed(2) + " " + to}</p>
         </Col>
         <br />
         <br />
