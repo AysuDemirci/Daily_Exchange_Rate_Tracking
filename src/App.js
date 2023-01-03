@@ -11,7 +11,6 @@ export default class App extends Component {
   state = {
     exchangeRates: [],
   };
-
   getExchangeRates = () => {
     fetch("http://localhost:3000/exchangeRates")
       .then((response) => response.json())
@@ -25,12 +24,17 @@ export default class App extends Component {
       });
   };
 
+  AssignedValue = (min, max) => {
+    return Math.floor(Math.random() * (max - min) + min);
+  };
+
   Timer = () => {
     var compare = this.state.exchangeRates;
 
     var idList = [];
 
-    var value = Math.floor(Math.random() * (5 - 1) + 1);
+    var value = this.AssignedValue(1, 5);
+   
 
     for (let i = 0; i < value; i++) {
       const random = Math.floor(Math.random() * compare.length);
@@ -60,7 +64,7 @@ export default class App extends Component {
     this.getExchangeRates();
 
     const timeRandom = () => {
-      var rand = Math.floor(Math.random() * (5 - 1) + 1);
+      var rand = this.AssignedValue(1, 5);
       setTimeout(timeRandom, rand * 1000);
       this.Timer();
     };
