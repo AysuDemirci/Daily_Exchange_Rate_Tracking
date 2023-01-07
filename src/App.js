@@ -6,6 +6,8 @@ import CurrencyTable from "./Components/CurrencyTable";
 import Footer from "./Components/Footer";
 import "./Style.css";
 import { Col, Container, Row } from "reactstrap";
+import Navbar from "./Components/Navbar";
+import { FaFacebookSquare,FaInstagramSquare,FaYoutube,FaTwitterSquare } from "react-icons/fa";
 
 export default class App extends Component {
   state = {
@@ -73,13 +75,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        <div className="header">
-          <h4 style={{ padding: "10px", paddingLeft: "300px" }}>
-            Daily Exchange Rate Tracking
-          </h4>
-        </div>
-
+      <div style={{overflow:"hidden"}}>
+       <Navbar/>
+       
         <br />
         <CarouselExhange exchangeRates={this.state.exchangeRates} />
         <br />

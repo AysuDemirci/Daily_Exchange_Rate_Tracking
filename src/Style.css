@@ -58,8 +58,9 @@
 .header{
     color:white;
     background-color: #ffaa5b;
-    height:55px;
+    height:70px;
     box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+    font-family: 'Teko', sans-serif;
 
    
 }
@@ -114,3 +115,12 @@ animation: fadeIn 2s linear infinite;
     }
     
  }
+
+ .navbar-styles{
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-left: 5px;
+    font-weight: 600;
+ }
+
+ 
