@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaArrowDown,FaArrowUp, FaMinus } from "react-icons/fa";
+import { FaArrowDown, FaArrowUp, FaMinus } from "react-icons/fa";
 
 export default class CurrencyTable extends Component {
   render() {
@@ -11,8 +11,7 @@ export default class CurrencyTable extends Component {
             width: "350px",
             height: "470px",
             boxShadow: " 0 10px 20px -10px rgba(0,0,0,0.2)",
-            textAlign:"center"
-            
+            textAlign: "center",
           }}
         >
           <thead>
@@ -22,24 +21,21 @@ export default class CurrencyTable extends Component {
                   fontSize: "15px",
                   color: "orangered",
                   height: "40px",
-                  
                 }}
               >
-                Currency Unit
+                Currency Unit / TRY
               </th>
               <th style={{ fontSize: "15px", color: "orangered" }}>
                 Currency Rate
               </th>
-              <th style={{color:"white"}}>.......</th>
+              <th style={{ color: "white" }}>.......</th>
             </tr>
           </thead>
 
           <tbody>
             {this.props.exchangeRates.map((exchangeRate) => (
-              <tr style={{ border: "1px solid #ffaa5b"}} key={exchangeRate.id}>
-                <td >
-                  {exchangeRate.currencyName}
-                </td>
+              <tr style={{ border: "1px solid #ffaa5b" }} key={exchangeRate.id}>
+                <td>{exchangeRate.currencyName}</td>
                 <td>{exchangeRate.price}</td>
                 <td>
                   {exchangeRate.status === "increase" ? (
