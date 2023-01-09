@@ -17,7 +17,7 @@ export default function Contents() {
             border:"1px solid #0c6a9e",
             marginLeft: "70px",
             marginTop: "-90px",
-            boxShadow: " 0 10px 20px -10px rgba(0,0,0,0.2)",
+            boxShadow: " rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
             borderRadius:"10px"
           }}
         >
@@ -41,7 +41,7 @@ export default function Contents() {
             border:"1px solid #0c6a9e",
             marginLeft: "70px",
             marginTop: "-77px",
-            boxShadow: " 0 10px 20px -10px rgba(0,0,0,0.2)",
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
             borderRadius:"10px"
           }}
         >
@@ -63,7 +63,7 @@ export default function Contents() {
             border:"1px solid #0c6a9e",
             marginLeft: "70px",
             marginTop: "-77px",
-            boxShadow: " 0 10px 20px -10px rgba(0,0,0,0.2)",
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
             borderRadius:"10px"
           }}
         >
@@ -85,7 +85,7 @@ export default function Contents() {
             border:"1px solid #0c6a9e",
             marginLeft: "70px",
             marginTop: "-85px",
-            boxShadow: " 0 10px 20px -10px rgba(0,0,0,0.2)",
+            boxShadow: " rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
             borderRadius:"10px"
           }}
         >
@@ -108,7 +108,7 @@ export default function Contents() {
             border:"1px solid #0c6a9e",
             marginLeft: "70px",
             marginTop: "-85px",
-            boxShadow: " 0 10px 20px -10px rgba(0,0,0,0.2)",
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
             borderRadius:"10px"
           }}
         >
