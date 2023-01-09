@@ -1,3 +1,5 @@
+
+
 .exchange-slideshow{
     box-shadow: 0 10px 20px -10px rgba(247, 125, 54, 0.555);
    overflow: hidden;
@@ -123,4 +125,14 @@ animation: fadeIn 2s linear infinite;
     font-weight: 600;
  }
 
+
+ .converter-style{
+    border: 1.5px solid #ffaa5b;
+    height: 330px;
+    border-radius: 7px;
+    width: 320px;
+    margin-left: -30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
+ }
+ 
  

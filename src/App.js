@@ -8,6 +8,7 @@ import "./Style.css";
 import { Col, Container, Row } from "reactstrap";
 import Navbar from "./Components/Navbar";
 import { FaFacebookSquare,FaInstagramSquare,FaYoutube,FaTwitterSquare } from "react-icons/fa";
+import UserComments from "./Components/UserComments";
 
 export default class App extends Component {
   state = {
@@ -94,6 +95,11 @@ export default class App extends Component {
             </Col>
             <Col md="3">
               <CurrencyTable exchangeRates={this.state.exchangeRates} />
+            </Col>
+          </Row>
+          <Row>
+            <Col md="3">
+              <UserComments/>
             </Col>
           </Row>
         </Container>
