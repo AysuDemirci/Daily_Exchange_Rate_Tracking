@@ -26,7 +26,7 @@ export default function Footer() {
           without permission.
         </span>
       </div>
-      <h6 style={{marginLeft:"1240px",color:"white",fontSize:"16px",marginTop:"-35px"}}>Follow us for current content !  </h6>
+      <h6 style={{marginLeft:"1240px",color:"white",fontSize:"16px",marginTop:"-35px"}}>Follow us for current content !</h6>
       <div style={{ marginLeft: "1450px", marginTop: "-35px" }}>
         
         <ul

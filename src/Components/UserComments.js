@@ -2,9 +2,23 @@ import React, { Component } from "react";
 import { Col } from "reactstrap";
 
 export default class UserComments extends Component {
+  state = {
+    users: [],
+  };
+
+  getUsers = () => {
+    fetch("http://localhost:3000/users")
+      .then((response) => response.json())
+      .then((data) => this.setState({ users: data }));
+  };
+
+  componentDidMount() {
+    this.getUsers();
+  }
+
   render() {
     return (
-      <Col style={{marginTop:"-350px"}}>
+      <Col style={{ marginTop: "-350px" }}>
         <h5 style={{ color: "orangered" }}>User Comments</h5>
         <div
           style={{
@@ -17,39 +31,24 @@ export default class UserComments extends Component {
           }}
         >
           <br />
-          <span style={{ fontWeight: "bold", marginLeft: "50px" }}>
-            John Lethans
-          </span>
-          <p style={{ marginLeft: "50px" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod.
-          </p>
-          <br />
-          <span style={{ fontWeight: "bold", marginLeft: "50px" }}>
-            Amanda Klasome
-          </span>
-          <p style={{ marginLeft: "50px" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod.
-          </p>
-          <br />
-          <span style={{ fontWeight: "bold", marginLeft: "50px" }}>
-            Jeremy Coxy
-          </span>
-          <p style={{ marginLeft: "50px" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod.
-          </p>
-          <br />
-          <span style={{ fontWeight: "bold", marginLeft: "50px" }}>
-            Roxenne Blutter
-          </span>
-          <p style={{ marginLeft: "50px" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod.
-          </p>
+          {this.state.users.map((user) => (
+            <ul key={user.id} style={{ listStyle: "none" }}>
+              <li
+                style={{
+                  fontWeight: "bold",
+                  marginLeft: "10px",
+                  marginTop: "10px",
+                }}
+              >
+                {user.userName}
+              </li>
+              <p style={{ marginLeft: "10px", marginTop: "10px" }}>
+                {user.comment}
+              </p>
+            </ul>
+          ))}
         </div>
-        <br/>
+        <br />
       </Col>
     );
   }
