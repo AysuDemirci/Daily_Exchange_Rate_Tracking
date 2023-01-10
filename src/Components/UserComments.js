@@ -4,7 +4,7 @@ import { Col } from "reactstrap";
 export default class UserComments extends Component {
   render() {
     return (
-      <Col style={{marginTop:"-200px"}}>
+      <Col style={{marginTop:"-350px"}}>
         <h5 style={{ color: "orangered" }}>User Comments</h5>
         <div
           style={{
