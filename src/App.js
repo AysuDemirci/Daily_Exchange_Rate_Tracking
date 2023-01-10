@@ -7,12 +7,13 @@ import Footer from "./Components/Footer";
 import "./Style.css";
 import { Col, Container, Row } from "reactstrap";
 import Navbar from "./Components/Navbar";
-import { FaFacebookSquare,FaInstagramSquare,FaYoutube,FaTwitterSquare } from "react-icons/fa";
 import UserComments from "./Components/UserComments";
 
 export default class App extends Component {
   state = {
     exchangeRates: [],
+    contents:[]
+    
   };
   getExchangeRates = () => {
     fetch("http://localhost:3000/exchangeRates")
@@ -26,6 +27,8 @@ export default class App extends Component {
         this.setState({ exchangeRates: data });
       });
   };
+  
+  
 
   AssignedValue = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
@@ -37,7 +40,6 @@ export default class App extends Component {
     var idList = [];
 
     var value = this.AssignedValue(1, 5);
-   
 
     for (let i = 0; i < value; i++) {
       const random = Math.floor(Math.random() * compare.length);
@@ -76,9 +78,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <div style={{overflow:"hidden"}}>
-       <Navbar/>
-       
+      <div style={{ overflow: "hidden" }}>
+        <Navbar />
+
         <br />
         <CarouselExhange exchangeRates={this.state.exchangeRates} />
         <br />
@@ -91,7 +93,7 @@ export default class App extends Component {
               <CurrencyConverter exchangeRates={this.state.exchangeRates} />
             </Col>
             <Col md="6">
-              <Contents />
+              <Contents/>
             </Col>
             <Col md="3">
               <CurrencyTable exchangeRates={this.state.exchangeRates} />
@@ -99,7 +101,7 @@ export default class App extends Component {
           </Row>
           <Row>
             <Col md="3">
-              <UserComments/>
+              <UserComments />
             </Col>
           </Row>
         </Container>
