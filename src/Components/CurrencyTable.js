@@ -10,7 +10,7 @@ export default class CurrencyTable extends Component {
             border: "1px solid #ffaa5b",
             width: "350px",
             height: "470px",
-            boxShadow: " 0 10px 20px -10px rgba(0,0,0,0.2)",
+            boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
             textAlign: "center",
           }}
         >

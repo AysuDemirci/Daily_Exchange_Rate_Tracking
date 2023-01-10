@@ -5,7 +5,7 @@ import {
   FaTwitterSquare,
   FaInstagramSquare,
 } from "react-icons/fa";
-import { FcGoogle, IconName } from "react-icons/fc";
+import { FcGoogle } from "react-icons/fc";
 
 export default function Footer() {
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
       style={{
         height: "100px",
         backgroundColor: "#07467c",
-        boxShadow: "rgba(0, 0, 0, 0.90) 0px 22px 70px 14px",
+        boxShadow: "rgba(0, 0, 0, 1) 0px 22px 70px 14px",
       }}
     >
       <br />
@@ -26,11 +26,13 @@ export default function Footer() {
           without permission.
         </span>
       </div>
-      <div style={{ marginLeft: "1450px", marginTop: "-45px" }}>
+      <h6 style={{marginLeft:"1240px",color:"white",fontSize:"16px",marginTop:"-35px"}}>Follow us for current content !</h6>
+      <div style={{ marginLeft: "1450px", marginTop: "-35px" }}>
+        
         <ul
           style={{
             display: "flex",
-            gap: "20px",
+            gap: "10px",
             color: "white",
             listStyle: "none",
           }}

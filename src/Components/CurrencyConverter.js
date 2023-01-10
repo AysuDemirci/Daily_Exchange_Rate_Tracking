@@ -54,16 +54,7 @@ export default function CurrencyConverter(props) {
   return (
     <div>
       <Container>
-        <Col
-          style={{
-            border: "1.5px solid #ffaa5b",
-            height: "330px",
-            borderRadius: "7px",
-            width: "320px",
-            marginLeft: "-30px",
-            boxShadow: " 0 10px 20px -10px rgba(0,0,0,0.2)",
-          }}
-        >
+        <Col className="converter-style">
           <h5
             style={{
               marginLeft: "75px",
@@ -156,54 +147,9 @@ export default function CurrencyConverter(props) {
           <h6 style={{ marginLeft: "25px", marginTop: "15px" }}> Amount:</h6>
           <p style={{ marginLeft: "25px" }}>{output.toFixed(2) + " " + to}</p>
         </Col>
+        
         <br />
         <br />
-        <Col>
-          <h5 style={{ color: "orangered" }}>User Comments</h5>
-          <div
-            style={{
-              overflow: "auto",
-              border: "1px solid #ffaa5b",
-              height: "400px",
-              marginLeft: "-30px",
-              borderRadius: "7px",
-              boxShadow: " 0 10px 20px -10px rgba(0,0,0,0.2)",
-            }}
-          >
-            <br />
-            <span style={{ fontWeight: "bold", marginLeft: "50px" }}>
-              John Lethans
-            </span>
-            <p style={{ marginLeft: "50px" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
-            </p>
-            <br />
-            <span style={{ fontWeight: "bold", marginLeft: "50px" }}>
-              Amanda Klasome
-            </span>
-            <p style={{ marginLeft: "50px" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
-            </p>
-            <br />
-            <span style={{ fontWeight: "bold", marginLeft: "50px" }}>
-              Jeremy Coxy
-            </span>
-            <p style={{ marginLeft: "50px" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
-            </p>
-            <br />
-            <span style={{ fontWeight: "bold", marginLeft: "50px" }}>
-              Roxenne Blutter
-            </span>
-            <p style={{ marginLeft: "50px" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
-            </p>
-          </div>
-        </Col>
       </Container>
     </div>
   );
