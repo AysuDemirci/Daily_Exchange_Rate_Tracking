@@ -92,5 +92,28 @@
             "image":"../images/news-241122-lebanon.bank_.jpg"
         }
 
+    ],
+    "users":[
+        {
+            "id":"1",
+            "userName":"John Lethans",
+            "comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+        },
+        {
+            "id":"2",
+            "userName":"Amanda Klasome",
+            "comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+        },
+        {
+            "id":"3",
+            "userName":"Jeremy Coxy",
+            "comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+        },
+        {
+            "id":"4",
+            "userName":"Roxenne Blutter",
+            "comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+        }
+
     ]
 }
