@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Daily Exchange Rate Tracking
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Bölüm 1
 
-## Available Scripts
+İçerik olarak;
 
-In the project directory, you can run:
+- React ile yazılmıştır,
+- Tasarım olarak CSS kullanılmıştır,
+- Bir API'ye bağlı şekilde çalışır.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Bölüm 2
 
-### `npm test`
+Bu dosyayı indirmek istediğinizde ilgili editörünüzde JS kodlarını çalıştırabilmek için;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. "npm start" ile çalışan bir projedir.
 
-### `npm run build`
+2. İndirilen dosya içerisinde bulunan db.json dosyasını projeye bağlamanız gerekmektedir.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. db.json dosyasını projeye bağlamak için;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- db.json dosyasına konumlanmanız gerekmektedir. Terminali açarak db.json'ın bulunduğu dosya editörünüzde çalışan dosyanın içerisinde bir dosyanın içerisinde değilse "cd.." yazarak bir önceki klasöre dönersiniz.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ![alt text](/public/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-01-12%20171702.png)
+   ![alt text](/public/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-01-12%20171722.png)
 
-### `npm run eject`
+- Ya da bulunduğunuz dosyada konumlanmışken ayrı bir dosyada ise "cd dosya ismi"  yazarak da db.json'ın bulunduğu dosyaya konumlanmış olursunuz.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Db.json'ın bulunduğu dosyaya konumlandıktan sonra terminale "npx json-server --watch db.json" yazarak artık API'yi projeye bağlamış olursunuz. API 3000 portunu kullanmaktadır.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    ![alt text](/public/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-01-12%20171832.png)
+   
+5. Yeni bir terminal açın ve "npm start" yazın. API 3000 portunu kullandığından dolayı sizden farklı bir port kullanmak için izin isteyecektir. Gelen YES/NO seçeneklerinden y tuşuna basarsanız artık proje 3001 portunda çalışmaya başlayacaktır.
+   
+    ![alt text](/public/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-01-12%20171911.png)
+ 
+  
