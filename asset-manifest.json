@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Daily_Exchange_Rate_Tracking/static/css/main.9efe258c.css",
+    "main.js": "/Daily_Exchange_Rate_Tracking/static/js/main.0e26673c.js",
+    "static/js/787.cff86dfd.chunk.js": "/Daily_Exchange_Rate_Tracking/static/js/787.cff86dfd.chunk.js",
+    "index.html": "/Daily_Exchange_Rate_Tracking/index.html",
+    "main.9efe258c.css.map": "/Daily_Exchange_Rate_Tracking/static/css/main.9efe258c.css.map",
+    "main.0e26673c.js.map": "/Daily_Exchange_Rate_Tracking/static/js/main.0e26673c.js.map",
+    "787.cff86dfd.chunk.js.map": "/Daily_Exchange_Rate_Tracking/static/js/787.cff86dfd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9efe258c.css",
+    "static/js/main.0e26673c.js"
+  ]
+}
