@@ -7,7 +7,7 @@ export default class UserComments extends Component {
   };
 
   getUsers = () => {
-    fetch("http://localhost:3000/users")
+    fetch("https://daily-exchange-rate-tracking-default-rtdb.firebaseio.com/users.json  ")
       .then((response) => response.json())
       .then((data) => this.setState({ users: data }));
   };
