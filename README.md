@@ -1,5 +1,7 @@
 # Daily Exchange Rate Tracking
 
+- Projemi ziyaret etmek isterseniz : https://aysudemirci.github.io/Daily_Exchange_Rate_Tracking/
+
 ## Bölüm 1
 
 İçerik olarak;
