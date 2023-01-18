@@ -5,7 +5,7 @@ export default class Contents extends Component {
     contents: [],
   };
   getContents = () => {
-    fetch("http://localhost:3000/contents")
+    fetch("https://daily-exchange-rate-tracking-default-rtdb.firebaseio.com/contents.json")
       .then((response) => response.json())
       .then((data) => this.setState({ contents: data }));
   };
