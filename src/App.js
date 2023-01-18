@@ -12,13 +12,12 @@ import UserComments from "./Components/UserComments";
 export default class App extends Component {
   state = {
     exchangeRates: [],
-    contents:[]
-    
   };
   getExchangeRates = () => {
-    fetch("http://localhost:3000/exchangeRates")
+    fetch("https://daily-exchange-rate-tracking-default-rtdb.firebaseio.com/exchangeRates.json")
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
         data.map((x) => {
           x.price = (Math.random() * 10).toFixed(2);
           x.status = "default";
@@ -26,9 +25,9 @@ export default class App extends Component {
 
         this.setState({ exchangeRates: data });
       });
+    
   };
-  
-  
+
 
   AssignedValue = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
@@ -93,7 +92,7 @@ export default class App extends Component {
               <CurrencyConverter exchangeRates={this.state.exchangeRates} />
             </Col>
             <Col md="6">
-              <Contents/>
+              <Contents />
             </Col>
             <Col md="3">
               <CurrencyTable exchangeRates={this.state.exchangeRates} />
